@@ -1,0 +1,40 @@
+
+
+<div class="comment-box-container">
+    
+    <div contenteditable="true" class="textarea" #commentBox (input)="limitCharacters($event, commentBox)"></div>
+  
+    <div class="toolbar">
+      <div class="formatting-options">
+        <button (click)="formatText('bold')" ><b>B</b></button>
+        <button (click)="formatText('italic')" ><i>I</i></button>
+        <button (click)="formatText('underline')" ><u>U</u></button>
+        <input type="file" id="fileInput" (change)="attachImage($event)" accept="image/*" hidden>
+        <button (click)="triggerFileInput()" class="attach-button">
+          <button><i class="fa fa-paperclip"></i></button> 
+        </button>
+      </div>
+  
+      <div class="action-buttons">
+        <button class="cancel" (click)="cancelComment()">Cancel</button>
+        <button class="send" (click)="sendComment()">Send</button>
+      </div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button (click)="latestComment()">Latest</button>
+    <button (click)="loadPopularComment()">Popular</button>
+  </div>
+  <div class="comments-section">
+    <div *ngFor="let comment of comments" class="comment-item">
+      <div class="comment-text" [innerHTML]="comment.commentText"></div>
+      <div *ngIf="comment.commentImg" class="comment-image">
+        <img [src]="comment.commentImg" alt="Comment Image">
+      </div>
+      <div [innerHTML]="comment.commenttime"></div>
+    </div>
+  </div>
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <button (click)="nextPage()">Next</button>
+  </div>

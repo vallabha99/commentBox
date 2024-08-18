@@ -1,0 +1,92 @@
+ .comment-box-container {
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .textarea {
+      padding: 10px;
+      min-height: 100px;
+      font-size: 16px;
+      outline: none;
+    
+  }
+  
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .formatting-options button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  
+  .formatting-options button:hover {
+    color: #007bff;
+  }
+  
+  .action-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .action-buttons .cancel {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .action-buttons .send {
+    background-color: #000;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .action-buttons .send:hover {
+    background-color: #333;
+  }
+   
+  .comments-section {
+    margin-top: 30px;
+  }
+  
+  .comment-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .comment-text {
+    font-size: 16px;
+  }
+  
+  .comment-image img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: right;
+    gap: 10px; 
+    margin-top: 20px; 
+  }
